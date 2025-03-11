@@ -53,7 +53,7 @@ def go(config: DictConfig):
         if "basic_cleaning" in active_steps:
             # run cleaning steps and load in W&B as 'preprocessed_data.csv'
             _ = mlflow.run(
-                os.path.join("src", "basic_cleaning"),
+                "https://github.com/amyints/Project-Build-an-ML-Pipeline-Starter.git#src/basic_cleaning",
                 #entry_points="main",
                 #version="main",
                 "main",
