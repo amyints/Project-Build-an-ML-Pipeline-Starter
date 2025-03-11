@@ -51,9 +51,24 @@ def go(config: DictConfig):
             )
 
         if "basic_cleaning" in active_steps:
-            ##################
-            # Implement here #
-            ##################
+            # run cleaning steps and load in W&B as 'preprocessed_data.csv'
+            _ = mlflow.run(
+                os.path.join("src", "basic_cleaning"),
+                #entry_points="main",
+                #version="main",
+                "main",
+                env_manager="conda",
+                parameters={
+                    "input_artifact": "sample.csv:latest",
+                    "output_artifact": "clean_sample.csv",
+                    "output_type": "clean_data",
+                    "output_description": "Clean data",
+                    "min_price": config['etl']['min_price'],
+                    "max_price": config['etl']['max_price']
+                },
+            )
+
+
             pass
 
         if "data_check" in active_steps:
