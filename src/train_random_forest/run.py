@@ -75,6 +75,7 @@ def go(args):
     # Fit the pipeline sk_pipe by calling the .fit method on X_train and y_train
     # YOUR CODE HERE
     ######################################
+    sk_pipe.fit(X_train[processed_features], y_train)
 
     # Compute r2 and MAE
     logger.info("Scoring")
@@ -95,10 +96,8 @@ def go(args):
     ######################################
     # Save the sk_pipe pipeline as a mlflow.sklearn model in the directory "random_forest_dir"
     # HINT: use mlflow.sklearn.save_model
-    mlflow.sklearn.save_model(
-        # YOUR CODE HERE
-        input_example = X_train.iloc[:5]
-    )
+    
+
     ######################################
 
 
