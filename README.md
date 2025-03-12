@@ -1,3 +1,10 @@
+# GitHub Repository
+https://github.com/amyints/Project-Build-an-ML-Pipeline-Starter
+https://github.com/amyints/Project-Build-an-ML-Pipeline-Starter.git
+
+# Weights & Biases Project
+https://wandb.ai/amyints-western-governors-university/nyc_airbnb?nw=nwuseramyints
+
 # Build an ML Pipeline for Short-Term Rental Prices in NYC
 You are working for a property management company renting rooms and properties for short periods of 
 time on various rental platforms. You need to estimate the typical price for a given property based 
@@ -17,6 +24,13 @@ In this project you will build such a pipeline.
   * [Pre-existing components](#pre-existing-components)
 
 ## Preliminary steps
+* Download the raw data and save it as sample.csv (main.py > download)
+* Clean the raw data and save it as clean_sample.csv (main.py > basic_cleaning)
+* Validate the data (main.py > data_check)
+* Split the data into trainval_data.csv and test_data.csv (main.py > data_split)
+* train the random forest and export the model as random_forest_export (main.py > train_random_forest)
+* test the regression model (main.py > test_regression model)
+
 
 ### Supported Operating Systems
 
